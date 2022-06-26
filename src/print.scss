@@ -1,0 +1,27 @@
+// theses values are the nearest multiple of 8 of the default A4 format
+// this avoid some visual imperfections in the chromium PDF generator
+// https://github.com/puppeteer/puppeteer/issues/2278
+// https://github.com/puppeteer/puppeteer/issues/2278#issuecomment-1166540702
+$width: 792px;
+$heignt: 1120px;
+
+// preview
+body.preview {
+  width: $width;
+  height: $heignt;
+  margin: 10px auto;
+  border: 1px solid var(--gray-400);
+}
+
+// print
+@media print {
+  @page {
+    size: $width $heignt;
+  }
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+}

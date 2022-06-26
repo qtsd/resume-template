@@ -1,0 +1,14 @@
+@import 'bootstrap/scss/bootstrap-reboot.scss';
+
+// fontawesome
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+@import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '@fortawesome/fontawesome-free/scss/solid.scss';
+@import '@fortawesome/fontawesome-free/scss/brands.scss';
+
+// google fonts
+@import '~@fontsource/open-sans/scss/mixins';
+
+@each $weight in 300, 400, 600 {
+  @include fontFaceCustom($weight: $weight, $style: 'normal');
+}

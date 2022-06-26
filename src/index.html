@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body class="preview">
+    <!-------------
+          SIDE
+    -------------->
+    <div id="side">
+      <!--  -->
+      <div id="photo" class="side-block"></div>
+
+      <!--  -->
+      <div id="description" class="side-block">
+        <div class="item">
+          <i class="fas fa-user-circle"></i>
+          <br />
+          {{age_and_situation}}
+        </div>
+
+        <div class="item">
+          <i class="fab fa-github"></i>
+          <br />
+          <a href="https://github.com/{{username}}">
+            github.com/{{username}}
+          </a>
+        </div>
+      </div>
+
+      <!--  -->
+      <div id="profile" class="side-block">
+        <h2>About me</h2>
+        <div>{{short_description}}</div>
+      </div>
+
+      <!--  -->
+      <div id="skills" class="side-block">
+        <h2>Skills</h2>
+
+        <div class="item">
+          <div>{{skill}}</div>
+          <div class="progress">
+            <div style="width: 80%"></div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div>{{skill}}</div>
+          <div class="progress">
+            <div style="width: 70%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div id="languages" class="side-block">
+        <h2>Languages</h2>
+
+        <div class="item">
+          <b>{{language}}</b>
+          <br />
+          {{language_ability}}
+        </div>
+
+        <div class="item">
+          <b>{{language}}</b>
+          <br />
+          {{language_ability}}
+        </div>
+      </div>
+    </div>
+
+    <div id="center">
+      <!-------------
+            TOP
+      -------------->
+      <div id="top">
+        <div class="left">
+          <h1>
+            {{firstname}}
+            <br />
+            {{lastname}}
+          </h1>
+          <h2>{{job_position}}</h2>
+        </div>
+
+        <div class="right">
+          <div>
+            <i class="fas fa-fw fa-phone"></i>
+            <a href="tel:{{phone number}}">{{phone number}}</a>
+          </div>
+
+          <div>
+            <i class="fas fa-fw fa-envelope"></i>
+            <a href="mailto:{{email}}">{{email}}</a>
+          </div>
+
+          <div>
+            <i class="fas fa-fw fa-map-marker"></i>
+            <a href="https://www.google.fr/maps/place/{{your city}}">
+              {{address_line}}
+              <br />
+              {{address_line}}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-------------
+           CONTENT
+      -------------->
+      <div id="content">
+        <!-- experiences -->
+        <div id="experiences" class="block timeline">
+          <h2>Experiences</h2>
+
+          <!--  -->
+          <div class="item">
+            <div class="left">
+              <b>{{company}}</b>
+              <div>{{city}}</div>
+              <div>{{from}} - {{to}}</div>
+            </div>
+
+            <div class="right">
+              <b>{{job_position}}</b>
+
+              <div>
+                {{description_line}}<br />
+                {{description_line}}<br />
+                {{description_line}}
+
+                <ul class="acquired-skills">
+                  <li>
+                    <i class="fas fa-chevron-right"></i>
+                    {{acquired_skill}}
+                  </li>
+                  <li>
+                    <i class="fas fa-chevron-right"></i>
+                    {{acquired_skill}}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!--  -->
+          <div class="item">
+            <div class="left">
+              <b>{{company}}</b>
+              <div>{{city}}</div>
+              <div>{{from}} - {{to}}</div>
+            </div>
+
+            <div class="right">
+              <b>{{job_position}}</b>
+
+              <div>
+                {{description_line}}<br />
+                {{description_line}}<br />
+                {{description_line}}
+
+                <ul class="acquired-skills">
+                  <li>
+                    <i class="fas fa-chevron-right"></i>
+                    {{acquired_skill}}
+                  </li>
+                  <li>
+                    <i class="fas fa-chevron-right"></i>
+                    {{acquired_skill}}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- formation -->
+        <div id="formation" class="block timeline">
+          <h2>Education</h2>
+
+          <!--  -->
+          <div class="item">
+            <div class="left">
+              <div>{{from}} - {{to}}</div>
+            </div>
+
+            <div class="right">
+              <b>{{degree}}</b>
+              <div>{{school}}</div>
+            </div>
+          </div>
+
+          <!--  -->
+          <div class="item">
+            <div class="left">
+              <div>{{from}} - {{to}}</div>
+            </div>
+
+            <div class="right">
+              <b>{{degree}}</b>
+              <div>{{school}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
