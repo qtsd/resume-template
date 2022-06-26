@@ -1,7 +1,7 @@
 const path = require('path');
 const puppeteer = require('puppeteer');
 
-const filepath = path.resolve(__dirname, '../dist/index.html');
+const distHtmlFilepath = path.resolve(__dirname, '../dist/index.html');
 
 (async () => {
   try {
@@ -13,8 +13,11 @@ const filepath = path.resolve(__dirname, '../dist/index.html');
 
     const page = await browser.newPage();
     page.on('pageerror', e => exit(e));
-    await page.goto(`file://${filepath}`, {waitUntil: 'load'});
-    await page.evaluate(() => document.body.classList.remove('preview'));
+    await page.goto(`file://${distHtmlFilepath}`);
+
+    await page.evaluate(() => {
+      document.body.classList.remove('preview');
+    });
 
     await page.pdf({
       path: 'resume.pdf',

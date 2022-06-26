@@ -1,14 +1,13 @@
-// theses values are the nearest multiple of 8 of the default A4 format
+// theses values are the nearest multiple of 8px of the default A4 format
 // this avoid some visual imperfections in the chromium PDF generator
-// https://github.com/puppeteer/puppeteer/issues/2278
 // https://github.com/puppeteer/puppeteer/issues/2278#issuecomment-1166540702
 $width: 792px;
-$heignt: 1120px;
+$height: 1120px;
 
 // preview
 body.preview {
   width: $width;
-  height: $heignt;
+  height: $height;
   margin: 10px auto;
   border: 1px solid var(--gray-400);
 }
@@ -16,7 +15,7 @@ body.preview {
 // print
 @media print {
   @page {
-    size: $width $heignt;
+    size: $width $height;
   }
 
   html,
