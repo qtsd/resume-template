@@ -17,7 +17,7 @@ Launch the webpack dev server to see your resume :
 npm run dev
 ```
 
-## Customize
+## Customization
 
 - Replace all the text wrapped double curly braces `{{text}}` with your informations.  
 - Replace `assets/img/photo.jpg` by your photo.
